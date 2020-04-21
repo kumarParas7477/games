@@ -1,0 +1,26 @@
+#table{
+  border: 10px;
+  /* border-style: double */
+}
+button{
+  border: 1px;
+  border-style: groove;
+  font-weight: bold
+}
+
+.container{
+  font-size: 12px;
+  font-weight: bold;
+  font-family: cursive
+}
+
+@media (max-width:300px)
+{
+input{
+  width:20px;
+  height: 20px;
+}
+}
+.row{
+  margin-left: 10px
+}

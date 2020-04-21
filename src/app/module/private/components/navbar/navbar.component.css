@@ -1,0 +1,19 @@
+nav{
+  border: 10px;
+  border-style: inset
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+a{
+  font-family: cursive
+}

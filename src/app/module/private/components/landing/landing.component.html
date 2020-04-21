@@ -1,0 +1,53 @@
+<div *ngIf="show" style="margin-top: 10px" style="align-content: center; background-image: url(./../../../../../../assets/1f3ae.jpg);background-repeat: no-repeat;
+background-attachment: fixed;">
+  <div class="container">
+    <h4 class='bg-secondary' style="text-align: center;color: white;">Games</h4>
+    <div id='table'>
+      <div class="row">
+        <div>
+          Search: <input [(ngModel)]="enteredtext" type='text' placeholder="NHL-30" (change)='filter'
+            style="border-radius: 10px ;background-color:white;color: azure;font-size: 10px;color: black;padding-left: 2px; height: 30px;"
+            aria-label="Search">
+        </div>
+        <div>
+          Sort:
+
+          <button class="btn btn-sm btn-light" (click)='ascending()'>ASC</button>
+          <button class="btn btn-sm btn-light" (click)='descending()'>DES</button>
+        </div>
+      </div>
+
+
+      <table class="table table-primary table-active table-bordered table-hover table-responsive-lg">
+        <thead>
+          <tr>
+            <th>Sr.</th>
+            <th>Title</th>
+            <th>Platform</th>
+
+            <th>Score</th>
+            <th>Genre</th>
+            <th>Editors_Choice</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of FilterData; let i = index">
+            <th>{{i+1}}</th>
+            <td><strong>{{ item['title'] }}</strong></td>
+            <td><strong>{{ item['platform']}}</strong></td>
+            <td><strong>{{ item['score']}}</strong></td>
+            <td><strong>{{ item.genre }}</strong></td>
+
+            <td>
+              <strong>{{item.editors_choice}}</strong>
+            </td>
+
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
